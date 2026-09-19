@@ -1,0 +1,757 @@
+
+/*Selectores: son la definicion de la estructura que utilizará el navegador para
+determinar qué nodos | elementos html se aplicará las reglas definidas 
+
+Bloque Style y en CSS Externos | archivos
+
+< selector > {
+    <regla> : <valor> ;
+    <regla> : <valor> ;
+    <regla> : <valor> ;
+    n...
+}
+
+body
+
+*/ 
+
+:root{
+ /* variables de css*/ 
+}
+
+* {
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+}
+
+html {
+    height:100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+  background-color: #fff;  
+  color : #333;
+  padding: 0px;
+  margin:0px;
+}
+
+header, footer {
+  background-color: #333;  
+  color : #fff;
+}
+
+main {
+    flex: 1;
+}
+
+.content {
+    max-width:1300px;
+    margin: 0.75rem auto;
+    padding:1rem;
+}
+
+/* cd .content/p */
+.content p {
+    color :#333;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+    padding:0.5rem 1rem; /*16 * 0.5 = 8px*/
+    box-shadow: 0px 5px 5px #000;
+}
+header .hmb-button {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.25rem;
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    width:64px;
+    height: 64px;
+    cursor: pointer;
+}
+header .hmb-button div {
+    width:60%;
+    height:5px;
+    border-radius: 3px;
+    background-color: #fff;
+
+}
+header section{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+
+header section img {
+    display:block;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header section h1 {
+    font-size: 1.2rem;
+    margin:0px;
+}
+header section h1 span{
+    display: block;
+    font-size: 0.5rem;
+    text-align: center;
+}
+header nav{
+    width:100%;
+}
+header nav ul {
+    display:flex;
+    flex-direction: column;
+    padding:0px;
+    list-style: none;
+    gap: 0.5rem;
+    width:100%;
+}
+header nav ul li {
+    width:100%;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding:0.5rem 0.8rem;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    width:100%;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background-color: #bbb;
+    color: #333;
+}
+
+@media (min-width:720px) {
+    header {
+        flex-direction: row;
+    }
+}
+
+.futbol {
+    font-size: 2rem; /* 16 * 2 */
+}
+
+.carusel {
+    position:relative;
+    width:100vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carusel .carusel-lane{
+    display:flex;
+    transition: transform 1s ease;
+}
+
+.carusel .carusel-lane > section{
+    flex-shrink: 0;
+}
+
+.carusel .carusel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    top:50%;
+    background-color: #ccc;
+    color:#333;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carusel .carusel-btn.carusel-btn-left {
+    left:0px;
+}
+.carusel .carusel-btn.carusel-btn-right {
+    right:0px;
+}
+
+.carusel .carusel-idx-btns {
+    position:absolute;
+    padding:1rem;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap:0.5rem;
+}
+.carusel .carusel-idx-btns .carusel-idx-btn{
+    width: 2rem;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+.carusel .carusel-idx-btns .carusel-idx-btn.active {
+    background-color: #000;
+}
+.hero-panel {
+    position: relative;
+    width:100vw;
+    height: 80vh;
+    overflow: hidden;
+}
+.hero-panel .hero-background {
+    width:100vw;
+    height: 80vh;
+}
+
+.hero-panel .hero-background img {
+    display: block;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.hero-panel .cta-holder {
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    padding:1.5rem;
+    border: 1px solid #000;
+    width: 280px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-panel .cta-holder.pn1 {
+    top: 25%;
+    left: 25%;
+}
+
+.hero-panel .cta-holder.pn2 {
+    top: 25%;
+    left: 75%;
+}
+
+.hero-panel .cta-holder.pn3 {
+    top: 75%;
+    left: 25%;
+}
+
+.hero-panel .cta-holder.pn4 {
+    top: 75%;
+    left: 75%;
+}
+
+.hero-panel .cta-holder.rp {
+    left: 75%;
+}
+.hero-panel .cta-holder.lp {
+    left: 25%;
+}
+
+.hero-panel .cta-holder .btn-hero {
+    display:inline-block;
+    padding:0.75rem 0.5rem;
+    background-color: #333;
+    color:#fff;
+    text-decoration: none;
+    border: 2px #000 solid;
+    box-shadow: 3px 3px 3px #000;
+    border-radius: 7px;
+}
+
+.cards-holder {
+    background-color: #a0f3b6;
+    padding:1rem;
+}
+/* BEM Variant Nomenclatura */
+.card {
+    width:320px;
+    padding: 1rem;
+    /*
+    Trouble
+    TRBL
+    Top Right Bottom Left
+
+    padding: <T> <R> <B> <L>;
+    padding: <Y> <X>;
+    padding: <ALL>;
+
+    1rem = 16px;
+    0.5rem = 8px;
+    2rem = 32px;
+    */
+    border:1px solid #000;
+    box-shadow: 2px 2px 5px #000;
+    background-color: #e88181;
+    background-image: linear-gradient(#e88181, white);
+    margin: 1rem 0px 0px 0px;
+    border-radius: 7px;
+    display:flex;
+    flex-direction: column;
+    /*
+    margin-top:
+    margin-left:
+    margin-right:
+    margin-bottom:
+    */
+}
+
+.card .card-header img {
+    width:100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: bottom center;
+    border: 4px solid #e88181;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: none;
+}
+.card .card-header span {
+    display: block;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    background-color: #e88181;
+    margin-top: -4px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    font-weight: bolder;
+}
+
+.card .card-half {
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+
+.card .card-half .card-body {
+    flex:1;
+    flex-basis: 60%;
+    margin-top:0.5rem;
+}
+
+.card .card-half .card-body h2 {
+    font-size: 1rem;
+    font-weight: 1px;
+    margin: 0.5rem 0px;
+}
+.card .card-half .card-footer {
+    flex:1;
+    flex-basis: 40%;
+    justify-content: center;
+}
+
+.card .card-footer .card-footer-big-label{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.card .card-footer .card-footer-cta{
+    display: inline-block;
+    padding:0.5rem 0.7rem;
+    border-radius: 13px;
+    background: #000;
+    color: #fff;
+    margin-top:1px;
+}
+
+/*
+
+    móvil        |      tabletas     |    escritorio     |      wider
+----------------< -------------------< ------------------< ---------------->
+
+               720px              1025px             1400px
+
+Mobile First
+
+*/
+
+.demo-rd {
+    background-color: #a0f3b6;
+}
+
+@media (min-width:720px){
+  .demo-rd {
+    background-color: #170aa2;
+  }
+}
+
+@media (min-width:1025px){
+  .demo-rd {
+    background-color: #596417;
+  }
+}
+
+@media (min-width:1400px){
+  .demo-rd {
+    background-color: #771a44;
+  }
+}
+
+/* 
+.justify-center
+*/
+
+.justify-center {
+    justify-content: center;
+}
+.justify-start {
+    justify-content: start;
+}
+.justify-end {
+    justify-content: end;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: start;
+}
+.align-end {
+    align-items: end;
+}
+/* Grilla de 12 Columnos*/
+.grid {
+    display:flex;
+    flex-direction: column;
+}
+.grid .row {
+    flex:1;
+    display:flex;
+    flex-direction: rows;
+    flex-wrap:wrap;
+}
+.grid .row [class*=col-] {
+    display:flex;
+    flex: 0 0;
+}
+
+.grid.debug .row [class*=col-] {
+    border: 1px solid #000;
+}
+
+.grid .row .col-1 { flex-basis: calc(100% / 12 * 1);}
+.grid .row .col-2 { flex-basis: calc(100% / 12 * 2);}
+.grid .row .col-3 { flex-basis: calc(100% / 12 * 3);}
+.grid .row .col-4 { flex-basis: calc(100% / 12 * 4);}
+.grid .row .col-5 { flex-basis: calc(100% / 12 * 5);}
+.grid .row .col-6 { flex-basis: calc(100% / 12 * 6);}
+.grid .row .col-7 { flex-basis: calc(100% / 12 * 7);}
+.grid .row .col-8 { flex-basis: calc(100% / 12 * 8);}
+.grid .row .col-9 { flex-basis: calc(100% / 12 * 9);}
+.grid .row .col-10 { flex-basis: calc(100% / 12 * 10);}
+.grid .row .col-11 { flex-basis: calc(100% / 12 * 11);}
+.grid .row .col-12 { flex-basis: 100%;}
+
+.grid .row .offset-0 { margin-left: 0px;}
+.grid .row .offset-1 { margin-left: calc(100% / 12 * 1);}
+.grid .row .offset-2 { margin-left: calc(100% / 12 * 2);}
+.grid .row .offset-3 { margin-left: calc(100% / 12 * 3);}
+.grid .row .offset-4 { margin-left: calc(100% / 12 * 4);}
+.grid .row .offset-5 { margin-left: calc(100% / 12 * 5);}
+.grid .row .offset-6 { margin-left: calc(100% / 12 * 6);}
+.grid .row .offset-7 { margin-left: calc(100% / 12 * 7);}
+.grid .row .offset-8 { margin-left: calc(100% / 12 * 8);}
+.grid .row .offset-9 { margin-left: calc(100% / 12 * 9);}
+.grid .row .offset-10 { margin-left: calc(100% / 12 * 10);}
+.grid .row .offset-11 { margin-left: calc(100% / 12 * 11);}
+.grid .row .offset-12 { margin-left: 100%;}
+
+@media (min-width:720px) {
+    .grid .row .col-m-1 { flex-basis: calc(100% / 12 * 1);}
+    .grid .row .col-m-2 { flex-basis: calc(100% / 12 * 2);}
+    .grid .row .col-m-3 { flex-basis: calc(100% / 12 * 3);}
+    .grid .row .col-m-4 { flex-basis: calc(100% / 12 * 4);}
+    .grid .row .col-m-5 { flex-basis: calc(100% / 12 * 5);}
+    .grid .row .col-m-6 { flex-basis: calc(100% / 12 * 6);}
+    .grid .row .col-m-7 { flex-basis: calc(100% / 12 * 7);}
+    .grid .row .col-m-8 { flex-basis: calc(100% / 12 * 8);}
+    .grid .row .col-m-9 { flex-basis: calc(100% / 12 * 9);}
+    .grid .row .col-m-10 { flex-basis: calc(100% / 12 * 10);}
+    .grid .row .col-m-11 { flex-basis: calc(100% / 12 * 11);}
+    .grid .row .col-m-12 { flex-basis: 100%;}
+
+    .grid .row .offset-m-0 { margin-left: 0px;}
+    .grid .row .offset-m-1 { margin-left: calc(100% / 12 * 1);}
+    .grid .row .offset-m-2 { margin-left: calc(100% / 12 * 2);}
+    .grid .row .offset-m-3 { margin-left: calc(100% / 12 * 3);}
+    .grid .row .offset-m-4 { margin-left: calc(100% / 12 * 4);}
+    .grid .row .offset-m-5 { margin-left: calc(100% / 12 * 5);}
+    .grid .row .offset-m-6 { margin-left: calc(100% / 12 * 6);}
+    .grid .row .offset-m-7 { margin-left: calc(100% / 12 * 7);}
+    .grid .row .offset-m-8 { margin-left: calc(100% / 12 * 8);}
+    .grid .row .offset-m-9 { margin-left: calc(100% / 12 * 9);}
+    .grid .row .offset-m-10 { margin-left: calc(100% / 12 * 10);}
+    .grid .row .offset-m-11 { margin-left: calc(100% / 12 * 11);}
+    .grid .row .offset-m-12 { margin-left: 100%;}
+}
+
+@media (min-width:1025px) {
+    .grid .row .col-l-1 { flex-basis: calc(100% / 12 * 1);}
+    .grid .row .col-l-2 { flex-basis: calc(100% / 12 * 2);}
+    .grid .row .col-l-3 { flex-basis: calc(100% / 12 * 3);}
+    .grid .row .col-l-4 { flex-basis: calc(100% / 12 * 4);}
+    .grid .row .col-l-5 { flex-basis: calc(100% / 12 * 5);}
+    .grid .row .col-l-6 { flex-basis: calc(100% / 12 * 6);}
+    .grid .row .col-l-7 { flex-basis: calc(100% / 12 * 7);}
+    .grid .row .col-l-8 { flex-basis: calc(100% / 12 * 8);}
+    .grid .row .col-l-9 { flex-basis: calc(100% / 12 * 9);}
+    .grid .row .col-l-10 { flex-basis: calc(100% / 12 * 10);}
+    .grid .row .col-l-11 { flex-basis: calc(100% / 12 * 11);}
+    .grid .row .col-l-12 { flex-basis: 100%;}
+
+    .grid .row .offset-l-0 { margin-left: 0px;}
+    .grid .row .offset-l-1 { margin-left: calc(100% / 12 * 1);}
+    .grid .row .offset-l-2 { margin-left: calc(100% / 12 * 2);}
+    .grid .row .offset-l-3 { margin-left: calc(100% / 12 * 3);}
+    .grid .row .offset-l-4 { margin-left: calc(100% / 12 * 4);}
+    .grid .row .offset-l-5 { margin-left: calc(100% / 12 * 5);}
+    .grid .row .offset-l-6 { margin-left: calc(100% / 12 * 6);}
+    .grid .row .offset-l-7 { margin-left: calc(100% / 12 * 7);}
+    .grid .row .offset-l-8 { margin-left: calc(100% / 12 * 8);}
+    .grid .row .offset-l-9 { margin-left: calc(100% / 12 * 9);}
+    .grid .row .offset-l-10 { margin-left: calc(100% / 12 * 10);}
+    .grid .row .offset-l-11 { margin-left: calc(100% / 12 * 11);}
+    .grid .row .offset-l-12 { margin-left: 100%;}
+}
+
+
+/* Clases y estilos para los formularios*/
+
+.form-demo {
+    margin-top:1rem;
+}
+
+form {
+    width:100%;
+    padding: 1rem;
+}
+label {
+    display:block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    display: block;
+    padding:0.25rem 0.5rem;
+    font-size: 1rem;
+    width:100%;
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+
+button {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    font-size:1rem;
+    border-radius: 27px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.primary {
+    background-color:#00b13b;
+}
+
+button.secondary {
+    background-color:#7b6c1e;
+}
+
+input:focus {
+    outline: inset 2px #000b7f;
+}
+
+input.error {
+    border-color: crimson;
+}
+
+.form-b input {
+    border:none;
+    border-bottom: 2px solid #000;
+    border-radius: 0px;
+}
+.form-b input:focus {
+    outline: none;
+    border-bottom: 2px solid #00b13b;
+}
+
+.form-b input.error {
+    outline: none;
+    border-bottom: 2px solid crimson;
+}
+
+.form-b button {
+    border-radius: 7px;
+    box-shadow: 3px 3px 15px #555;
+}
+
+.form-actions {
+    display:flex;
+    gap:0.5rem;
+    justify-content: end;
+    margin-top:1rem;
+}
+.input-field{
+    margin-top:0.5rem;
+}
+
+
+
+@media (min-width:1025px) {
+    .input-field {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+.spinner-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-color: #000000dd;
+}
+
+.spinner-container .spinner {
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #00b13b;
+    border-right-style: dotted;
+    animation: spinner-animation 1s ease-in-out infinite;
+}
+
+.spinner-container .bar-loader {
+    width:0px;
+    height: 5x;
+    border-radius: 7px;
+    margin-top:1rem;
+    animation: bar-animation 5s ease-in-out infinite;
+}
+
+@keyframes spinner-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes bar-animation {
+    0% {
+        width:0px;
+        background-color: #771a44;
+    }
+    50% {
+        width:25px;
+        background-color: #b72e6b;
+    }
+    90% {
+        width:70px;
+        background-color: #1a4d77;
+    }
+    100% {
+        width:120px;
+        background-color: #21411c;
+    }
+}
+
+.hidden {
+    display:none;
+}
+
+/*Estilos para el PLan de Estudios*/
+.plan {
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+    gap:1rem;
+}
+
+.plan .bloque {
+    display: flex;
+    flex-direction: row;
+    gap:0.5rem;
+    border:1px solid #333;
+    padding:0.5rem;
+}
+.plan .bloque .bloque-title {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 72px;
+    text-align: center;
+}
+
+.plan .bloque .asignatura{
+    border:1px solid #000b7f;
+    background-color: #ddd;
+    color:#333;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.25rem;
+    padding-right: 2rem;
+    position:relative;
+}
+.plan .bloque .asignatura span:nth-child(1){
+    flex:1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.plan .bloque .asignatura span:nth-child(2){
+    font-weight: bold;
+    position: absolute;
+    bottom: 32px;
+    right:-5px;
+    transform: rotate(-90deg);
+}
+
+.plan .bloque .asignatura.selected {
+    background-color: #00b13b;
+}
+
+.plan .bloque .asignatura.required {
+    background-color: #935407;
+    color: #fff;
+}
+
+.plan .bloque .asignatura.opens {
+    background-color: #077793;
+    color: #fff;
+}

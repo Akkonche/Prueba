@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portales Web 1 2026-02</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Curso de Portales Web 1</h1>
+    <h2>Encabezados y Párrafos</h2>
+
+    <p>Los párrafos en html son estrutura que delimintan de forma gramátical
+        un conjunto de palabras para ...</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        tenetur doloribus accusamus enim ea itaque ullam id provident voluptate
+        veritatis aliquam, placeat facilis ducimus? Alias voluptas nostrum
+        necessitatibus eum repellat.</p>
+    <h3>Encabezados</h3>
+    <p>Los encabezados en html se representan con las etiquetas <code>&lt;h1&gt;</code>
+        a <code>&lt;h6&gt;</code>, siendo <code>&lt;h1&gt;</code> el encabezado de mayor importancia
+        y <code>&lt;h6&gt;</code> el de menor importancia. Estos encabezados se utilizan para
+        organizar el contenido de una página web y mejorar su legibilidad.</p>
+    <h3>Párrafos</h3>
+    <p>Los párrafos en html se representan con la etiqueta <code>&lt;p&gt;</code>. Esta etiqueta se utiliza para
+        delimitar un bloque de texto que forma un párrafo. Los párrafos pueden contener texto, imágenes, enlaces y otros
+        elementos HTML.</p>
+    <h4>Párrafos Simples</h4>
+    <p>Un párrafo simple es aquel que contiene solo texto. Por ejemplo:</p>
+    <p>Este es un párrafo simple.</p>
+    <h4>Corte de Linea</h4>
+    <p>Para crear un corte de línea dentro de un párrafo, se utiliza la etiqueta <code>&lt;br&gt;</code>. Esta etiqueta
+        no tiene una etiqueta de cierre y se utiliza para insertar un salto de línea. Por ejemplo:</p>
+    <p>Este es un párrafo con un corte de línea.<br>Este texto aparecerá en una nueva línea.</p>
+    <h2>Listas y Tablas</h2>
+    <h3>Listas</h3>
+    <p>Las listas en html se utilizan para organizar información de manera estructurada.
+        Existen dos tipos principales
+        de listas: listas ordenadas y listas no ordenadas.</p>
+    <h4>Listas Ordenadas</h4>
+    <ol>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ol>
+    <h4>Listas No Ordenadas</h4>
+    <ul>
+        <li>Un Elemento</li>
+        <li>Otro elemento</li>
+        <li>Un elemento mas</li>
+    </ul>
+    <h2>Tablas</h2>
+    <table border="1" >
+        <tr>
+            <th colspan="4">Directorio de Contactos XYZ</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Orlando Betancourth</td>
+            <td>0000-0000</td>
+            <td>obetancourthunicah@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Fulanito de Tal</td>
+            <td></td>
+            <td>fulanito@detal.com</td>
+        </tr>
+        <tr>
+            <td colspan="3">Total Contactos</td>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <hr/>
+    <table border="1" >
+        <thead>
+            <tr>
+                <th colspan="5">Directorio de Contactos XYZ</th>
+            </tr>
+            <tr>
+                <th>#</th>
+                <th>Departamento</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td rowspan="2">Administración</td>
+                <td>Orlando Betancourth</td>
+                <td>0000-0000</td>
+                <td>obetancourthunicah@gmail.com</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Fulanito de Tal</td>
+                <td></td>
+                <td>fulanito@detal.com</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td rowspan="2">Contabilidad</td>
+                <td>Menganito de Tal</td>
+                <td></td>
+                <td>menganito@detal.com</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>Sutanito de Tal</td>
+                <td>0000-0000</td>
+                <td>sutanito@detal.com</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total Contactos</td>
+                <td>2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Imágenes y Multimedia</h2>
+    <img src="media/perfilFotoOptimizada.jpg"
+        alt="Foto de perfil de Fulanito de Tal" />
+
+    <hr/>
+    <picture>
+        <source srcset="https://picsum.photos/id/200/1300/720"
+           media="(min-width:1024px)" />
+        <source srcset="https://picsum.photos/id/220/1024/640"
+           media="(min-width:720px)" />
+        <img src="https://picsum.photos/id/120/480/480"
+            alt="Reponsive Img from Lorem Picsum Service" />
+    </picture>
+    <h2>Hypervínculos</h2>
+     <!-- <protocolo>://<dominio dns>:443/path/subpath/recurso   -->
+
+    <p>Tres tipos de hipervinculos:
+        <ol>
+            <li>URL Relativas</li>
+            <li>URL Absolutas</li>
+            <li>Anclas</li>
+        </ol>
+    </p>
+    <h2>Formularios</h2>
+    <a href="formulario.html">Ir a Formulario</a>
+    <h2>Contenedores Semánticos</h2>
+    <a href="introcss.html">Ir a Página Semántica con CSS y Javascript</a>
+
+
+</body>
+</html>
